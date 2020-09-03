@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto');
 
 body {
-    background-image: linear-gradient(to bottom, rgba(51, 43, 35, 0.93), rgba(51, 43, 35, 0.93)), url('wood.jpg');
+    background-image: linear-gradient(to bottom, rgba(51, 43, 35, 0.93), rgba(51, 43, 35, 0.93)), url('/wood.jpg');
 }
 
 .main-section {
@@ -11,7 +11,7 @@ body {
 }
 
 .modal-content {
-    background-image: linear-gradient(to bottom, rgba(63, 60, 52, 0.96), rgba(63, 60, 52, 0.96)), url('wood.jpg');
+    background-image: linear-gradient(to bottom, rgba(63, 60, 52, 0.96), rgba(63, 60, 52, 0.96)), url('/wood.jpg');
     opacity: 1;
     padding: 0 18px;
     box-shadow: 0px 0px 3px #ccc2a6;
@@ -91,13 +91,13 @@ button {
 }
 
     .foot {
-    background-image: linear-gradient(to bottom, rgba(32, 31, 26, 0.98), rgba(32, 31, 26, 0.99)), url('wood.jpg');
+    background-image: linear-gradient(to bottom, rgba(32, 31, 26, 0.98), rgba(32, 31, 26, 0.99)), url('/wood.jpg');
     overflow: hidden;
     border-top:2px solid #ccc2a6;
 }
 
   .topnav {
-    background-image: linear-gradient(to bottom, rgba(63, 60, 52, 0.96), rgba(63, 60, 52, 0.96)), url('wood.jpg');
+    background-image: linear-gradient(to bottom, rgba(63, 60, 52, 0.96), rgba(63, 60, 52, 0.96)), url('/wood.jpg');
     overflow: hidden;
     border-bottom:2px solid #ccc2a6;
     border-radius: 10px;
@@ -114,7 +114,7 @@ button {
   }
   
   .topnav a:hover {
-    background-image: linear-gradient(to bottom, rgba(29, 27, 24, 0.96), rgba(29, 27, 24, 0.96)), url('wood.jpg');
+    background-image: linear-gradient(to bottom, rgba(29, 27, 24, 0.96), rgba(29, 27, 24, 0.96)), url('/wood.jpg');
     color: white;
   }
   

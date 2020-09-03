@@ -59,15 +59,15 @@ html
                             test.Quantity = Number(test.Quantity) - 1;
                             if (test.Quantity < 0)
                                 test.Quantity = 0;
-                            await axios.put('/minus/' + test.id)
+                            await axios.put('/vin/m/' + test.id)
                         },
                         plus: async function(test) {
                             test.Quantity = Number(test.Quantity) + 1;
-                            await axios.put('/plus/' + test.id)
+                            await axios.put('/vin/p/' + test.id)
                         },
                         dele: async function(test, obj) {
                             this.vineList.splice(test, 1);
-                            await axios.delete('/rm/' + obj.id)
+                            await axios.delete('/vin/' + obj.id)
                         },
                         addvine: async function() {
                             let correct = true;
@@ -86,7 +86,7 @@ html
                             if (isNaN(my_obj.Quantity))
                                 correct = false;
                             if (correct == true) {
-                                let newvine = await axios.post('/add2/' + my_obj.Name + '/' + my_obj.Description + '/' + my_obj.Quantity)
+                                let newvine = await axios.post('/vin/add2/' + my_obj.Name + '/' + my_obj.Description + '/' + my_obj.Quantity)
                                 my_obj.id = newvine.data.id;
                                 this.vineList.push(my_obj);
                                 this.name = '';

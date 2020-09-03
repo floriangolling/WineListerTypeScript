@@ -44,7 +44,7 @@ html
                 methods: {
                     dele: async function(test, obj) {
                         this.stageList.splice(test, 1);
-                        await axios.delete('/rm/stage/' + obj.id)
+                        await axios.delete('/stage/' + obj.id)
                     },
                 },
                 computed: {

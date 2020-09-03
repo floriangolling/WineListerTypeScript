@@ -14,8 +14,8 @@ html
                 h1(class="mytitle" style="font-size:20px;padding-bottom:40px") Ajout d'une semaine de stage
                 div(class="modal-content")
                     div(class=" user-img")
-                        img(src="vine.png", alt="")
-                    form(class="col-12" action="/addstage",method="POST")
+                        img(src="/vine.png", alt="")
+                    form(class="col-12" action="/stage/addstage",method="POST")
                         div(class="form-group")
                             i(class="fas fa-wine-bottle test")
                             input(type="number" class="form-control" placeholder="Week n°.." name="week" required style="width:150px" min="0")
