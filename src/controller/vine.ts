@@ -3,6 +3,7 @@ import { mods } from "./models"
 import session from "express-session"
 import flash from "express-flash"
 
+//Get all vine page
 export let getVin = async function (req: Request, res: Response) {
     console.log('VINE GET');
     if (!req.session.email) {
@@ -22,6 +23,7 @@ export let getVin = async function (req: Request, res: Response) {
     }
 }
 
+//POST a new vine
 export let addVin = async function (req: Request, res: Response) {
     console.log('ADD');
     console.log(req.body);
@@ -34,6 +36,7 @@ export let addVin = async function (req: Request, res: Response) {
     }
 }
 
+//POST a new vine on the /vine page
 export let addVinID = async function (req: Request, res: Response) {
     console.log('ADD');
     if (!req.session.email)
@@ -45,6 +48,7 @@ export let addVinID = async function (req: Request, res: Response) {
     }
 }
 
+//Get the page to add new vine
 export let getAddVin = async function(req: Request, res: Response) {
     console.log('GET ADD');
     if (!req.session.email) {
@@ -56,6 +60,7 @@ export let getAddVin = async function(req: Request, res: Response) {
     }
 }
 
+//Remove 1 vine from ID UPDATE
 export let VinMinus = async function(req: Request, res: Response) {
 {
     console.log('MINUS');
@@ -75,6 +80,7 @@ export let VinMinus = async function(req: Request, res: Response) {
     }
 }
 
+//Delete a vine
 export let VinRemove = async function(req: Request, res: Response) {
     console.log('RM');
 
@@ -87,6 +93,7 @@ export let VinRemove = async function(req: Request, res: Response) {
     }
 }
 
+//add a new vine from ID UPDATE
 export let VinPlus = async function(req: Request, res: Response) {
     console.log('PLUS');
     console.log(req.body);

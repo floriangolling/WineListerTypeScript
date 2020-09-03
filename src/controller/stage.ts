@@ -3,6 +3,7 @@ import { mods } from "./models"
 import session from "express-session"
 import flash from "express-flash"
 
+//Get all stage route
 export let getStage = async function (req: Request, res: Response) {
     console.log('STAGE GET');
     if (!req.session.email) {
@@ -19,6 +20,7 @@ export let getStage = async function (req: Request, res: Response) {
     }
 }
 
+//Delete stage Route
 export let rmStage = async function(req: Request, res: Response) {
     console.log('RM');
 
@@ -31,6 +33,7 @@ export let rmStage = async function(req: Request, res: Response) {
     }
 }
 
+//Add a new stage route POST
 export let addStage = async function (req: Request, res: Response ) {
     console.log('ADD STAGE');
     console.log(req.body);
@@ -43,6 +46,7 @@ export let addStage = async function (req: Request, res: Response ) {
     }
 }
 
+//Add a new stage GET
 export let getAddStage = async function(req: Request, res: Response) {
     console.log('GET ADD');
     if (!req.session.email) {

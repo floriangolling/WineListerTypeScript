@@ -3,6 +3,7 @@ import { mods } from "./models"
 import session from "express-session"
 import flash from "express-flash"
 
+//Route de l'accueil
 export let Accueil = async function(req: Request, res: Response) {
     console.log('GET ACCUEIL');
     if (!req.session.email) {
@@ -15,6 +16,7 @@ export let Accueil = async function(req: Request, res: Response) {
     }
 }
 
+//Register Route
 export let getRegister = async function (req: Request, res: Response) {
     if (!req.session.email) {
         console.log('GET LOGIN');
@@ -24,6 +26,7 @@ export let getRegister = async function (req: Request, res: Response) {
     }
 }
 
+//Login Route
 export let getLogin = async function (req: Request, res: Response) {
     if (!req.session.email) {
         console.log('GET LOGIN');
@@ -33,6 +36,7 @@ export let getLogin = async function (req: Request, res: Response) {
     }
 }
 
+//Post Login Route
 export let postLogin = async function (req: Request, res: Response) {
     console.log('POST LOGIN');
     console.log(req.body);
@@ -55,6 +59,7 @@ export let postLogin = async function (req: Request, res: Response) {
     }
 }
 
+//Post Register Route
 export let postRegister = async function(req: Request, res: Response) {
     console.log('POST REGISTER');
     console.log(req.body);
@@ -70,6 +75,7 @@ export let postRegister = async function(req: Request, res: Response) {
     }
 }
 
+//Logout Route
 export let logout = async function(req: Request, res: Response) {
     console.log('POST LOGOUT');
     console.log('loggin out');

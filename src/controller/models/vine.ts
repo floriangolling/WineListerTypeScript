@@ -1,6 +1,7 @@
 import { Sequelize, Model, DataTypes, BuildOptions } from "sequelize";
 import { database } from "../../database/sequelize";
 
+//Define the Vine class, from Model
 export class Vine extends Model {
     public Name: string;
     public Description: string;
@@ -8,6 +9,7 @@ export class Vine extends Model {
     public username: string;
 }
 
+//init the class
 Vine.init(
     {
         Name: {
@@ -33,4 +35,5 @@ Vine.init(
     }
 )
 
+//Sync the class, if one true, drop the table if exist, if false, it doesnt.
 Vine.sync({ force : false });
