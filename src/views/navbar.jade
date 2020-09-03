@@ -1,0 +1,15 @@
+mixin navLink(link, name)
+    a(href=link) #{name}
+
+div(class="topnav")
+    +navLink('/','Accueil')
+    -if(messages && messages.Co)
+                .message.Co
+                    +navLink('/add',"Ajout d'un vin")
+                    +navLink('/vins',"Voir les vins")
+                    +navLink('/addstage', 'Ajouter une semaine')
+                    +navLink('/stage',"Stage")
+                    +navLink('/logout', 'Se deconnecter')
+    -else
+        +navLink('/register',"S'enregistrer")
+        +navLink('/login','Se connecter')
